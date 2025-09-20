@@ -19,7 +19,7 @@ public class BoardManager : MonoBehaviour
     public int Height;
     public Tile[] GroundTiles;
     public Tile[] WallTiles;
-    public GameObject FoodPrefab;
+    public GameObject[] FoodPrefabs;
 
     public Vector3 CellToWorld(Vector2Int cellIndex)
     {
@@ -41,7 +41,7 @@ public class BoardManager : MonoBehaviour
 
     void GenerateFood()
     {
-        int foodCount = 5;
+        int foodCount = Random.Range(3,6);
         for (int i = 0; i < foodCount; ++i)
         {
             int randomIndex = Random.Range(0, m_EmptyCellsList.Count);
@@ -49,7 +49,9 @@ public class BoardManager : MonoBehaviour
             
             m_EmptyCellsList.RemoveAt(randomIndex);
             CellData data = m_BoardData[coord.x, coord.y];
-            GameObject newFood = Instantiate(FoodPrefab);
+
+            int foodRandomIndex = Random.Range(0, FoodPrefabs.Length);
+            GameObject newFood = Instantiate(FoodPrefabs[foodRandomIndex]);
             newFood.transform.position = CellToWorld(coord);
             data.ContainedObject = newFood;
         }
