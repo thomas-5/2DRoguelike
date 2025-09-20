@@ -12,7 +12,6 @@ public class BoardManager : MonoBehaviour
     private Tilemap m_Tilemap;
     private Grid m_Grid;
 
-
     public int Width;
     public int Height;
     public Tile[] GroundTiles;
