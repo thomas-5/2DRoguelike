@@ -25,41 +25,46 @@ public class PlayerController : MonoBehaviour
 
     // Update is called once per frame
     private void Update()
-   {
-       Vector2Int newCellTarget = m_CellPosition;
-       bool hasMoved = false;
+    {
+        Vector2Int newCellTarget = m_CellPosition;
+        bool hasMoved = false;
 
-       if(Keyboard.current.upArrowKey.wasPressedThisFrame)
-       {
-           newCellTarget.y += 1;
-           hasMoved = true;
-       }
-       else if(Keyboard.current.downArrowKey.wasPressedThisFrame)
-       {
-           newCellTarget.y -= 1;
-           hasMoved = true;
-       }
-       else if (Keyboard.current.rightArrowKey.wasPressedThisFrame)
-       {
-           newCellTarget.x += 1;
-           hasMoved = true;
-       }
-       else if (Keyboard.current.leftArrowKey.wasPressedThisFrame)
-       {
-           newCellTarget.x -= 1;
-           hasMoved = true;
-       }
+        if(Keyboard.current.upArrowKey.wasPressedThisFrame)
+        {
+            newCellTarget.y += 1;
+            hasMoved = true;
+        }
+        else if(Keyboard.current.downArrowKey.wasPressedThisFrame)
+        {
+            newCellTarget.y -= 1;
+            hasMoved = true;
+        }
+        else if (Keyboard.current.rightArrowKey.wasPressedThisFrame)
+        {
+            newCellTarget.x += 1;
+            hasMoved = true;
+        }
+        else if (Keyboard.current.leftArrowKey.wasPressedThisFrame)
+        {
+            newCellTarget.x -= 1;
+            hasMoved = true;
+        }
 
-       if(hasMoved)
-       {
-           //check if the new position is passable, then move there if it is.
-           BoardManager.CellData cellData = m_Board.GetCellData(newCellTarget);
+        if(hasMoved)
+        {
+            //check if the new position is passable, then move there if it is.
+            BoardManager.CellData cellData = m_Board.GetCellData(newCellTarget);
 
-           if(cellData != null && cellData.Passable)
-           {
+            if(cellData != null && cellData.Passable)
+            {
                 GameManager.Instance.TurnManager.Tick();
                 MoveTo(newCellTarget);
-           }
-       }
-   }
+
+                if (cellData.ContainedObject != null)
+                {
+                    cellData.ContainedObject.PlayerEntered();
+                }
+            }
+        }
+    }
 }

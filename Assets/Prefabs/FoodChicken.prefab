@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7666369462279438900}
   - component: {fileID: 8524437595453109143}
+  - component: {fileID: 2560743419979832188}
   m_Layer: 0
   m_Name: FoodChicken
   m_TagString: Untagged
@@ -87,3 +88,16 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &2560743419979832188
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2274788134496137386}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 032c2c503d4764aa096439f56a2cfa96, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  AmountGranted: 2

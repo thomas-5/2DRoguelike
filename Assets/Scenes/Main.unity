@@ -546,10 +546,10 @@ MonoBehaviour:
   WallTiles:
   - {fileID: 11400000, guid: b86a3ed4801a748d289a141adbf63b7a, type: 2}
   FoodPrefabs:
-  - {fileID: 2274788134496137386, guid: 28948701c908a4085abe56e6137450ac, type: 3}
-  - {fileID: 612002580781690409, guid: ea498e552a85c4dc39ab072e0be44cb8, type: 3}
-  - {fileID: 915216807018015782, guid: 6daca5be706514ae1ae8c1a7dfbbdc7d, type: 3}
-  - {fileID: 1375245858612751877, guid: 0c5df90deebb746349140dcb8008754f, type: 3}
+  - {fileID: 2560743419979832188, guid: 28948701c908a4085abe56e6137450ac, type: 3}
+  - {fileID: 3144511733885784255, guid: ea498e552a85c4dc39ab072e0be44cb8, type: 3}
+  - {fileID: 6033217359415493228, guid: 6daca5be706514ae1ae8c1a7dfbbdc7d, type: 3}
+  - {fileID: 250644307693398436, guid: 0c5df90deebb746349140dcb8008754f, type: 3}
   Player: {fileID: 2125833749}
 --- !u!1 &2125833748
 GameObject:

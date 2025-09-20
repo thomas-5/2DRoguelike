@@ -11,13 +11,16 @@ public class GameManager : MonoBehaviour
     private Label m_FoodLabel;
     private int m_FoodAmount = 100;
 
-    private void OnTurnHappen()
+    void OnTurnHappen()
     {
-        m_FoodAmount -= 1;
-        m_FoodLabel.text = "Food : " + m_FoodAmount;
-        Debug.Log("Current amount of food: " + m_FoodAmount);
+        ChangeFood(-1);
     }
 
+    public void ChangeFood(int amount)
+    {
+        m_FoodAmount += amount;
+        m_FoodLabel.text = "Food : " + m_FoodAmount;
+    }
     private void Awake()
     {
         if (Instance != null)
