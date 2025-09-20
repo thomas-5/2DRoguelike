@@ -545,6 +545,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 2f06501808fce4f1ca46dcdacff30644, type: 2}
   WallTiles:
   - {fileID: 11400000, guid: b86a3ed4801a748d289a141adbf63b7a, type: 2}
+  FoodPrefab: {fileID: 1375245858612751877, guid: 0c5df90deebb746349140dcb8008754f, type: 3}
   Player: {fileID: 2125833749}
 --- !u!1 &2125833748
 GameObject:
